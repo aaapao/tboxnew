@@ -31,7 +31,7 @@
 		"key": "kuwosong",
 		"name": "🎵酷我┃音乐",
 		"type": 5,
-		"searchable": 0,
+		"searchable": 1,
 		"filterClass": "",
 		"firstClass": "",
 		"filterPlay": "",
@@ -42,10 +42,10 @@
 		"keepPlayFileKeywords": "",
 		"selectedPlayer": "2"
 	},{
-		"key": "kuwosong",
+		"key": "kuwosong2",
 		"name": "🎵酷我┃推荐播放器",
 		"type": 5,
-		"searchable": 1,
+		"searchable": 0,
 		"filterClass": "",
 		"firstClass": "",
 		"filterPlay": "",
@@ -345,6 +345,19 @@
 		"filterPlay": "",
 		"firstPlay": "",
 		"ext": "https://ghproxy.cn/https://raw.githubusercontent.com/gs317900225/tbox/refs/heads/main/soup/zhenbuka_soup.json",
+		"flagable": 0,
+		"filterPlayFileKeywords": "",
+		"keepPlayFileKeywords": ""
+	},{
+		"key": "6huo",
+		"name": "⌚预告片┃嗅探",
+		"type": 6,
+		"searchable": 0,
+		"filterClass": "",
+		"firstClass": "",
+		"filterPlay": "",
+		"firstPlay": "",
+		"ext": "https://ghproxy.cn/https://raw.githubusercontent.com/gs317900225/tbox/refs/heads/main/soup/6huo_soup.json",
 		"flagable": 0,
 		"filterPlayFileKeywords": "",
 		"keepPlayFileKeywords": ""
