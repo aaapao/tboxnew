@@ -1,5 +1,7 @@
 点击加入群组：https://t.me/+vgu3e34l2PQ5NDA1
 
+关于DLNA投屏、外部播放器：前提该视频未检测header协议头（例如：Referer、Origin、Cookie），才能调用外部播放。
+
 ## APP简介
 tBox是一款多功能APP空壳，支持导入直播源、影视和听书源。
 
@@ -19,13 +21,21 @@ tBox虽然在UI设计上借鉴了猫影视的风格，但其源码是完全不�
 天翼云盘的cookie有IP验证,切换IP后cookie会无效，且ipv4和ipv6的cookie无法混用。建议在电信的WIFI环境下使用(ipv4)。
 如雷鲸无返回数据，请在设置中打开一次该站点，该站点有时需效验。
 
+### 12月20日：增加bili.js(哔哩哔哩) 可自行转存后修改变量拓展为：儿童教育、地方戏曲等。
+
 ### V1.0.11版更新：优化搜索、增加豆瓣、酷我音乐（请在设置中登录哔哩哔哩，VIP歌曲通过该站解析）
 
 1.0.11版以上请搭配new.json配置使用：
 
-影视点播源： https://ghproxy.cn/https://raw.githubusercontent.com/tt9912/tBox/refs/heads/main/new.json
+IOS影视点播源： https://ghproxy.cn/https://raw.githubusercontent.com/tt9912/tBox/refs/heads/main/new.json
 
-听书听歌源：https://ghproxy.cn/https://raw.githubusercontent.com/tt9912/tBox/refs/heads/main/music.json
+IOS听书听歌源：https://ghproxy.cn/https://raw.githubusercontent.com/tt9912/tBox/refs/heads/main/music.json
+
+
+应大家要求，补充安卓端。（音频播放器不适配安卓端，音乐+听书默认使用：推荐播放器）
+
+安卓端视频源： https://ghproxy.cn/https://raw.githubusercontent.com/tt9912/tBox/refs/heads/main/安卓new.json
+
 
 旧版配置不再维护，请更新至新版。
 
@@ -58,7 +68,7 @@ tBox虽然在UI设计上借鉴了猫影视的风格，但其源码是完全不�
  
  2：输入歌手文字及姓名（例如：歌手周杰伦）
  
- 3：输入专辑文字及名称（例如：专辑叶惠美）
+ 3：输入专辑文字及名称（例如：专辑叶惠美、周杰伦专辑）
  
 ```json
 {
@@ -100,7 +110,9 @@ User-Agent: okHttp
 ### 视频源配置链接
 旧版配置（限1.0.9~1.0.10版，后续不再维护，建议更新）：https://ghproxy.cn/https://raw.githubusercontent.com/tt9912/tBox/refs/heads/main/配置.json
 
-新版配置（限1.0.11版以上）：https://ghproxy.cn/https://raw.githubusercontent.com/tt9912/tBox/refs/heads/main/new.json
+新版IOS端配置（限1.0.11版以上）：https://ghproxy.cn/https://raw.githubusercontent.com/tt9912/tBox/refs/heads/main/new.json
+
+新版安卓端配置（限1.0.11版以上）：https://ghproxy.cn/https://raw.githubusercontent.com/tt9912/tBox/refs/heads/main/安卓new.json
 
 **关于tBox的更新：**
 
