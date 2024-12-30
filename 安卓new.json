@@ -28,20 +28,6 @@
 		"keepPlayFileKeywords": "",
         "recommend": "1"
 	},{
-		"key": "mogg",
-		"name": "🤹‍♂️木偶┃UC盘",
-		"type": 5,
-		"searchable": 1,
-		"filterClass": "",
-		"firstClass": "",
-		"filterPlay": "",
-		"firstPlay": "",
-		"ext": "https://ghproxy.cn/https://raw.githubusercontent.com/gs317900225/tbox/refs/heads/main/newjs/mogg.js",
-		"flagable": 0,
-		"filterPlayFileKeywords": "",
-		"keepPlayFileKeywords": "",
-		"selectedPlayer": "0"
-	},{
 		"key": "labi",
 		"name": "🖍蜡笔┃网盘",
 		"type": 5,
@@ -84,15 +70,15 @@
 		"keepPlayFileKeywords": "",
 		"selectedPlayer": "0"
 	},{
-		"key": "xiaomi",
-		"name": "🍚小米┃UC盘",
+		"key": "mogg",
+		"name": "🍚木偶┃UC盘",
 		"type": 5,
 		"searchable": 1,
 		"filterClass": "",
 		"firstClass": "",
 		"filterPlay": "",
 		"firstPlay": "",
-		"ext": "https://ghproxy.cn/https://raw.githubusercontent.com/gs317900225/tbox/refs/heads/main/newjs/xiaomi.js",
+		"ext": "https://ghproxy.cn/https://raw.githubusercontent.com/gs317900225/tbox/refs/heads/main/newjs/mogg.js",
 		"flagable": 0,
 		"filterPlayFileKeywords": "",
 		"keepPlayFileKeywords": "",
@@ -181,6 +167,20 @@
 		"filterPlayFileKeywords": "",
 		"keepPlayFileKeywords": "",
         "selectedPlayer":"0"
+	},{
+		"key": "libvio",
+		"name": "🌏libvio|不卡",
+		"type": 5,
+		"searchable": 1,
+		"filterClass": "",
+		"firstClass": "",
+		"filterPlay": "HD5播放,BD播放,BD5播放",
+		"firstPlay": "UC网盘,夸克网盘",
+		"ext": "https://ghproxy.cn/https://raw.githubusercontent.com/gs317900225/tbox/refs/heads/main/newjs/libvio.js",
+		"flagable": 0,
+		"filterPlayFileKeywords": "",
+		"keepPlayFileKeywords": "",
+		"selectedPlayer": "0"
 	},{
 		"key": "kuyun",
 		"name": "☁️酷云┃直链",
