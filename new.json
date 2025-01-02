@@ -1,18 +1,18 @@
 {
 	"sites": [{
-	"key": "mogg",
-	"name": "🤹‍♂️木偶┃UC盘",
-	"type": 5,
-	"searchable": 1,
-	"filterClass": "",
-	"firstClass": "",
-	"filterPlay": "",
-	"firstPlay": "",
-	"ext": "https://ghproxy.cn/https://raw.githubusercontent.com/gs317900225/tbox/refs/heads/main/newjs/mogg.js",
-	"flagable": 0,
-	"filterPlayFileKeywords": "",
-	"keepPlayFileKeywords": "",
-	"selectedPlayer": "0"
+		"key": "mogg",
+		"name": "🤹‍♂️木偶┃UC盘",
+		"type": 5,
+		"searchable": 1,
+		"filterClass": "",
+		"firstClass": "",
+		"filterPlay": "",
+		"firstPlay": "",
+		"ext": "https://ghproxy.cn/https://raw.githubusercontent.com/gs317900225/tbox/refs/heads/main/newjs/mogg.js",
+		"flagable": 0,
+		"filterPlayFileKeywords": "",
+		"keepPlayFileKeywords": "",
+		"selectedPlayer": "0"
 	},{
 		"key": "wogg",
 		"name": "🧸玩偶┃网盘",
@@ -40,7 +40,7 @@
 		"flagable": 0,
 		"filterPlayFileKeywords": "",
 		"keepPlayFileKeywords": "",
-       		"recommend": "1"
+       	"recommend": "1"
 	},{
 		"key": "labi",
 		"name": "🖍蜡笔┃网盘",
@@ -194,7 +194,7 @@
 		"flagable": 0,
 		"filterPlayFileKeywords": "",
 		"keepPlayFileKeywords": "",
-       		"selectedPlayer":"0"
+       	"selectedPlayer":"0"
 	},{
     	"key": "wwgz",
     	"name": "🐶旺旺┃嗅探",
