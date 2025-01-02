@@ -1,4 +1,5 @@
-const webSite='https://vip.omii.top';
+//下面是发布代码
+const webSite='http://feimaouc.cloud:666';
 
    function newfetch(url, options) {
        options = options || {};
@@ -726,24 +727,28 @@ if (isQuark) {
    
        // 定义分类数据
        const classData = [
-         { "type_id": 30, "type_name": "电影" },
-         { "type_id": 31, "type_name": "剧集" },
-         { "type_id": 32, "type_name": "动漫" },
-         { "type_id": 33, "type_name": "综艺" },
-         { "type_id": 34, "type_name": "短剧" }
+         { "type_id": 1, "type_name": "闪电电影" },
+         { "type_id": 2, "type_name": "闪电剧集" },
+         { "type_id": 4, "type_name": "闪电动漫" },
+         { "type_id": 3, "type_name": "闪电综艺" },
+         { "type_id": 6, "type_name": "闪电短剧" },
+         { "type_id": 201,"type_name": "国产剧" },
+         { "type_id": 203,  "type_name": "欧美剧" },
+         { "type_id": 204, "type_name": "日韩剧" },
+         { "type_id": 202, "type_name": "港台剧" }
        ];
    
        // 定义分类数据
        const filterData = {
-         "30": [
+         "1": [
            {
              "key": "area",
              "name": "地区",
              "value": [
                { "n": "全部", "v": "" },
-               { "n": "大陆", "v": "大陆" },
-               { "n": "香港", "v": "香港" },
-               { "n": "台湾", "v": "台湾" },
+               { "n": "大陆", "v": "中国大陆" },
+               { "n": "香港", "v": "中国香港" },
+               { "n": "台湾", "v": "中国台湾" },
                { "n": "美国", "v": "美国" },
                { "n": "韩国", "v": "韩国" },
                { "n": "英国", "v": "英国" },
@@ -819,15 +824,15 @@ if (isQuark) {
              ]
            }
          ],
-         "31": [
+         "2": [
            {
              "key": "area",
              "name": "地区",
              "value": [
                { "n": "全部", "v": "" },
-               { "n": "大陆", "v": "大陆" },
-               { "n": "香港", "v": "香港" },
-               { "n": "台湾", "v": "台湾" },
+               { "n": "大陆", "v": "中国大陆" },
+               { "n": "香港", "v": "中国香港" },
+               { "n": "台湾", "v": "中国台湾" },
                { "n": "美国", "v": "美国" },
                { "n": "韩国", "v": "韩国" },
                { "n": "英国", "v": "英国" },
@@ -903,18 +908,20 @@ if (isQuark) {
              ]
            }
          ],
-         "32": [
+         "3": [
            {
              "key": "area",
              "name": "地区",
              "value": [
                { "n": "全部", "v": "" },
-               { "n": "大陆", "v": "大陆" },
-               { "n": "香港", "v": "香港" },
-               { "n": "台湾", "v": "台湾" },
+               { "n": "大陆", "v": "中国大陆" },
+               { "n": "香港", "v": "中国香港" },
+               { "n": "台湾", "v": "中国台湾" },
                { "n": "美国", "v": "美国" },
                { "n": "韩国", "v": "韩国" },
-               { "n": "日本", "v": "日本" }
+               { "n": "英国", "v": "英国" },
+               { "n": "日本", "v": "日本" },
+               { "n": "法国", "v": "法国" }
              ]
            },
            {
@@ -982,18 +989,20 @@ if (isQuark) {
              ]
            }
          ],
-         "33": [
+         "4": [
            {
              "key": "area",
              "name": "地区",
              "value": [
                { "n": "全部", "v": "" },
-               { "n": "大陆", "v": "大陆" },
-               { "n": "香港", "v": "香港" },
-               { "n": "台湾", "v": "台湾" },
+               { "n": "大陆", "v": "中国大陆" },
+               { "n": "香港", "v": "中国香港" },
+               { "n": "台湾", "v": "中国台湾" },
                { "n": "美国", "v": "美国" },
                { "n": "韩国", "v": "韩国" },
-               { "n": "日本", "v": "日本" }
+               { "n": "日本", "v": "日本" },
+               { "n": "法国", "v": "法国" },
+               { "n": "英国", "v": "英国" }
              ]
            },
            {
@@ -1061,7 +1070,21 @@ if (isQuark) {
              ]
            }
          ],
-         "34": [
+         "6": [
+            {
+             "key": "area",
+             "name": "地区",
+             "value": [
+               { "n": "全部", "v": "" },
+               { "n": "大陆", "v": "中国大陆" },
+               { "n": "香港", "v": "中国香港" },
+               { "n": "台湾", "v": "中国台湾" },
+               { "n": "美国", "v": "美国" },
+               { "n": "韩国", "v": "韩国" },
+               { "n": "日本", "v": "日本" },
+               { "n": "英国", "v": "英国" }
+             ]
+           },
            {
              "key": "year",
              "name": "年份",
@@ -1082,6 +1105,230 @@ if (isQuark) {
                { "n": "2012", "v": "2012" },
                { "n": "2011", "v": "2011" },
                { "n": "2010", "v": "2010" }
+             ]
+           },
+           {
+             "key": "letter",
+             "name": "字母",
+             "value": [
+               { "n": "全部", "v": "" },
+               { "n": "A", "v": "A" },
+               { "n": "B", "v": "B" },
+               { "n": "C", "v": "C" },
+               { "n": "D", "v": "D" },
+               { "n": "E", "v": "E" },
+               { "n": "F", "v": "F" },
+               { "n": "G", "v": "G" },
+               { "n": "H", "v": "H" },
+               { "n": "I", "v": "I" },
+               { "n": "J", "v": "J" },
+               { "n": "K", "v": "K" },
+               { "n": "L", "v": "L" },
+               { "n": "M", "v": "M" },
+               { "n": "N", "v": "N" },
+               { "n": "O", "v": "O" },
+               { "n": "P", "v": "P" },
+               { "n": "Q", "v": "Q" },
+               { "n": "R", "v": "R" },
+               { "n": "S", "v": "S" },
+               { "n": "T", "v": "T" },
+               { "n": "U", "v": "U" },
+               { "n": "V", "v": "V" },
+               { "n": "W", "v": "W" },
+               { "n": "X", "v": "X" },
+               { "n": "Y", "v": "Y" },
+               { "n": "Z", "v": "Z" }
+             ]
+           },
+           {
+             "key": "by",
+             "name": "排序",
+             "value": [
+               { "n": "时间", "v": "" },
+               { "n": "人气", "v": "hits" },
+               { "n": "评分", "v": "score" }
+             ]
+           }
+         ],
+         "201": [
+            {
+             "key": "year",
+             "name": "年份",
+             "value": [
+               { "n": "全部", "v": "" },
+               { "n": "2024", "v": "2024" },
+               { "n": "2023", "v": "2023" },
+               { "n": "2022", "v": "2022" },
+               { "n": "2021", "v": "2021" },
+               { "n": "2020", "v": "2020" }
+             ]
+           },
+           {
+             "key": "letter",
+             "name": "字母",
+             "value": [
+               { "n": "全部", "v": "" },
+               { "n": "A", "v": "A" },
+               { "n": "B", "v": "B" },
+               { "n": "C", "v": "C" },
+               { "n": "D", "v": "D" },
+               { "n": "E", "v": "E" },
+               { "n": "F", "v": "F" },
+               { "n": "G", "v": "G" },
+               { "n": "H", "v": "H" },
+               { "n": "I", "v": "I" },
+               { "n": "J", "v": "J" },
+               { "n": "K", "v": "K" },
+               { "n": "L", "v": "L" },
+               { "n": "M", "v": "M" },
+               { "n": "N", "v": "N" },
+               { "n": "O", "v": "O" },
+               { "n": "P", "v": "P" },
+               { "n": "Q", "v": "Q" },
+               { "n": "R", "v": "R" },
+               { "n": "S", "v": "S" },
+               { "n": "T", "v": "T" },
+               { "n": "U", "v": "U" },
+               { "n": "V", "v": "V" },
+               { "n": "W", "v": "W" },
+               { "n": "X", "v": "X" },
+               { "n": "Y", "v": "Y" },
+               { "n": "Z", "v": "Z" }
+             ]
+           },
+           {
+             "key": "by",
+             "name": "排序",
+             "value": [
+               { "n": "时间", "v": "" },
+               { "n": "人气", "v": "hits" },
+               { "n": "评分", "v": "score" }
+             ]
+           }
+         ],
+         "203": [
+            {
+             "key": "year",
+             "name": "年份",
+             "value": [
+               { "n": "全部", "v": "" },
+               { "n": "2024", "v": "2024" },
+               { "n": "2023", "v": "2023" },
+               { "n": "2022", "v": "2022" },
+               { "n": "2021", "v": "2021" },
+               { "n": "2020", "v": "2020" }
+             ]
+           },
+           {
+             "key": "letter",
+             "name": "字母",
+             "value": [
+               { "n": "全部", "v": "" },
+               { "n": "A", "v": "A" },
+               { "n": "B", "v": "B" },
+               { "n": "C", "v": "C" },
+               { "n": "D", "v": "D" },
+               { "n": "E", "v": "E" },
+               { "n": "F", "v": "F" },
+               { "n": "G", "v": "G" },
+               { "n": "H", "v": "H" },
+               { "n": "I", "v": "I" },
+               { "n": "J", "v": "J" },
+               { "n": "K", "v": "K" },
+               { "n": "L", "v": "L" },
+               { "n": "M", "v": "M" },
+               { "n": "N", "v": "N" },
+               { "n": "O", "v": "O" },
+               { "n": "P", "v": "P" },
+               { "n": "Q", "v": "Q" },
+               { "n": "R", "v": "R" },
+               { "n": "S", "v": "S" },
+               { "n": "T", "v": "T" },
+               { "n": "U", "v": "U" },
+               { "n": "V", "v": "V" },
+               { "n": "W", "v": "W" },
+               { "n": "X", "v": "X" },
+               { "n": "Y", "v": "Y" },
+               { "n": "Z", "v": "Z" }
+             ]
+           },
+           {
+             "key": "by",
+             "name": "排序",
+             "value": [
+               { "n": "时间", "v": "" },
+               { "n": "人气", "v": "hits" },
+               { "n": "评分", "v": "score" }
+             ]
+           }
+         ],
+         "204": [
+            {
+             "key": "year",
+             "name": "年份",
+             "value": [
+               { "n": "全部", "v": "" },
+               { "n": "2024", "v": "2024" },
+               { "n": "2023", "v": "2023" },
+               { "n": "2022", "v": "2022" },
+               { "n": "2021", "v": "2021" },
+               { "n": "2020", "v": "2020" }
+             ]
+           },
+           {
+             "key": "letter",
+             "name": "字母",
+             "value": [
+               { "n": "全部", "v": "" },
+               { "n": "A", "v": "A" },
+               { "n": "B", "v": "B" },
+               { "n": "C", "v": "C" },
+               { "n": "D", "v": "D" },
+               { "n": "E", "v": "E" },
+               { "n": "F", "v": "F" },
+               { "n": "G", "v": "G" },
+               { "n": "H", "v": "H" },
+               { "n": "I", "v": "I" },
+               { "n": "J", "v": "J" },
+               { "n": "K", "v": "K" },
+               { "n": "L", "v": "L" },
+               { "n": "M", "v": "M" },
+               { "n": "N", "v": "N" },
+               { "n": "O", "v": "O" },
+               { "n": "P", "v": "P" },
+               { "n": "Q", "v": "Q" },
+               { "n": "R", "v": "R" },
+               { "n": "S", "v": "S" },
+               { "n": "T", "v": "T" },
+               { "n": "U", "v": "U" },
+               { "n": "V", "v": "V" },
+               { "n": "W", "v": "W" },
+               { "n": "X", "v": "X" },
+               { "n": "Y", "v": "Y" },
+               { "n": "Z", "v": "Z" }
+             ]
+           },
+           {
+             "key": "by",
+             "name": "排序",
+             "value": [
+               { "n": "时间", "v": "" },
+               { "n": "人气", "v": "hits" },
+               { "n": "评分", "v": "score" }
+             ]
+           }
+         ],
+         "202": [
+            {
+             "key": "year",
+             "name": "年份",
+             "value": [
+               { "n": "全部", "v": "" },
+               { "n": "2024", "v": "2024" },
+               { "n": "2023", "v": "2023" },
+               { "n": "2022", "v": "2022" },
+               { "n": "2021", "v": "2021" },
+               { "n": "2020", "v": "2020" }
              ]
            },
            {
@@ -1194,7 +1441,7 @@ if (isQuark) {
    //});
    
    //homeContent()
-   //  .then(data => console.log(data))
+    // .then(data => console.log(data))
     // .catch(error => console.error('Error:', error));
    
    //获取影视分类列表
@@ -1250,8 +1497,8 @@ if (isQuark) {
        });
      }
    }
-   //categoryContent('30',1)
-   //  .then(data => console.log(data))
+   //categoryContent('2',1)
+    // .then(data => console.log(data))
    //  .catch(error => console.error('Error:', error));
    
 
@@ -1291,29 +1538,39 @@ if (isQuark) {
         const cloudNameCount = {};
         //await toast('正在加载网盘剧集信息',5);
 
-        // 并发执行 fetchVideoFiles
-        const fetchPromises = cloudLinks.map(async (link, i) => {
-            if (link.includes('uc.cn') || link.includes('quark.cn')) {
-                let baseCloudName = link.includes('uc.cn') ? 'UC网盘' : '夸克网盘'; // 对应 vod_play_from
-                await toast(`正在获取第 ${i + 1} 个${baseCloudName}剧集信息`, 2); // 2 秒的持续时间
-                const result = await fetchVideoFiles(link); // 所有播放链接对应 vod_play_url
-                if (result) { // 检查 result 是否为空
-                    // 检查云盘名称是否已经使用过
-                    if (cloudNameCount[baseCloudName] === undefined) {
-                        cloudNameCount[baseCloudName] = 1;
-                        vod_play_from.push(baseCloudName);
-                    } else {
-                        cloudNameCount[baseCloudName]++;
-                        vod_play_from.push(`${baseCloudName}${cloudNameCount[baseCloudName]}`);
-                    }
 
-                    vod_play_url.push(result);
-                }
-            }
-        });
 
-        // 等待所有并发请求完成
-        await Promise.all(fetchPromises);
+       // 并发执行 fetchVideoFiles
+       const fetchPromises = cloudLinks.map(async (link, i) => {
+         if (link.includes('uc.cn') || link.includes('quark.cn')) {
+           let baseCloudName = link.includes('uc.cn') ? 'UC网盘' : '夸克网盘';
+           await toast(`正在获取第 ${i + 1} 个${baseCloudName}剧集信息`, 2);
+           const result = await fetchVideoFiles(link);
+           if (result) {
+             return { index: i, baseCloudName, result };
+           }
+         }
+         return null;
+       });
+       const results = await Promise.all(fetchPromises);
+       results.forEach((item) => {
+         if (item) {
+           const { index, baseCloudName, result } = item;
+           if (cloudNameCount[baseCloudName] === undefined) {
+             cloudNameCount[baseCloudName] = 1;
+             vod_play_from[index] = baseCloudName;
+           } else {
+             cloudNameCount[baseCloudName]++;
+             vod_play_from[index] = `${baseCloudName}${cloudNameCount[baseCloudName]}`;
+           }
+           vod_play_url[index] = result;
+         }
+       });
+       vod_play_from = vod_play_from.filter(Boolean);
+       vod_play_url = vod_play_url.filter(Boolean);
+
+
+
 
         // 将提取的信息组织成一个对象
         const movieDetails = {
@@ -1365,7 +1622,15 @@ if (isQuark) {
 
 
 
-   //detailContent("/index.php/vod/detail/id/74.html")
+
+   //detailContent("/index.php/vod/detail/id/183682.html")
    //  .then(data => console.log(data))
-   // .catch(error => console.error('Error:', error));
+  //  .catch(error => console.error('Error:', error));
+   
+   
+   
+   
+   
+   
+   
    
