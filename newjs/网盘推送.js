@@ -715,6 +715,24 @@ let vodpic = '';
 
 
 async function homeContent() {
+const classData = [
+    { "type_id": 1, "type_name": "网盘推送无首页数据，只有历史和收藏记录" }
+];
+       const list = [{
+           vod_id: '',
+           vod_name: '网盘推送无首页源',
+           vod_remarks: '左上角的"三"点进去推送',
+           vod_pic: ''
+         }];
+
+          return JSON.stringify({
+         code: 1,
+         msg: "数据列表",
+         page: "1",
+         limit: "20",
+         list: list,
+         class: classData
+       });
 }
 
 async function searchContent(keyword) {
@@ -727,111 +745,58 @@ async function categoryContent(tid, pg = 1, extend) {
 
 
 async function detailContent(ids) {
-try {
-   const vod_id = ids;
-   //const vod_name = ids;
-   //console.log(vod_name);
-   const vod_year = '';
-   //console.log(vod_year);
-   const vod_director = '';
-   //console.log(vod_director);
-   const vod_actor = '';
-   //console.log(vod_actor);
-   let vod_pic = '';
- if (ids.includes('uc.cn')) {
-   vod_pic = 'https://bizaladdin-image.baidu.com/0/pic/-1114408436_513559284_235383715.png';
- } else if (ids.includes('quark.cn')) {
-   vod_pic = 'https://bizaladdin-image.baidu.com/0/pic/-1383952426_1737186201_-54798625.png';
- }
-   //console.log(vod_pic);
-   let vod_remarks = '';
-   const vod_content = '推送源无剧情';
-   //console.log(vod_content);
-   const cloudLinks = [ids];
-   //console.log(cloudLinks);
-   // 初始化 vod_play_from 和 vod_play_url
-   let vod_play_from = [];
-   let vod_play_url = [];
-   let vodname = '';
-   let vodpic = '';
-   // 记录云盘名称的使用次数
-   const cloudNameCount = {};
-   //await toast('正在加载网盘剧集信息',5);
-   // 并发执行 fetchVideoFiles
-   const fetchPromises = cloudLinks.map(async (link, i) => {
-       if (link.includes('uc.cn') || link.includes('quark.cn')) {
-           let baseCloudName = link.includes('uc.cn') ? 'UC网盘' : '夸克网盘'; // 对应 vod_play_from
-           await toast(`正在获取第 ${i + 1} 个${baseCloudName}剧集信息`, 2); // 2 秒的持续时间
-           const result = await fetchVideoFiles(link); // 所有播放链接对应 vod_play_url
-           if (result) { // 检查 result 是否为空
-               // 检查云盘名称是否已经使用过
-               if (cloudNameCount[baseCloudName] === undefined) {
-                   cloudNameCount[baseCloudName] = 1;
-                   vod_play_from.push(baseCloudName);
-               } else {
-                   cloudNameCount[baseCloudName]++;
-                   vod_play_from.push(`${baseCloudName}${cloudNameCount[baseCloudName]}`);
-               }
-
-              vod_play_url.push(result.result);
-              if (vodpic === '') {
-                  vodpic = result.vodpic;
-              }
-              if (vodname === '') {
-                vodname = result.vodname;
-            }
-
-           }
-       }
-   });
-
-   // 等待所有并发请求完成
-   await Promise.all(fetchPromises);
-
-   // 将提取的信息组织成一个对象
-   const movieDetails = {
-       code: 1,
-       msg: "数据列表",
-       page: 1,
-       pagecount: 1,
-       limit: "20",
-       total: 1,
-       list: [{
-           vod_id: vod_id,
-           vod_name: vodname || vod_id,
-           vod_pic: vodpic || vod_pic,
-           vod_actor: vod_actor,
-           vod_director: vod_director,
-           vod_remarks: vod_remarks,
-           vod_year: vod_year,
-           vod_content: vod_content,
-           vod_play_from: vod_play_from.join('$$$'),
-           vod_play_url: vod_play_url.join('$$$')
-       }]
-   };
-
-   // 处理 vod_play_from 和 vod_play_url
-   const playFromList = movieDetails.list[0].vod_play_from.split('$$$');
-   const playUrlList = movieDetails.list[0].vod_play_url.split('$$$');
-
-   const filteredPlayFromList = [];
-   const filteredPlayUrlList = [];
-
-   for (let i = 0; i < playUrlList.length; i++) {
-       if (!playUrlList[i].includes('该网盘已取消了分享')) {
-           filteredPlayFromList.push(playFromList[i]);
-           filteredPlayUrlList.push(playUrlList[i]);
-       }
-   }
-
-   movieDetails.list[0].vod_play_from = filteredPlayFromList.join('$$$');
-   movieDetails.list[0].vod_play_url = filteredPlayUrlList.join('$$$');
-
-   // 返回 JSON 字符串
-   //console.log(JSON.stringify(movieDetails));
-   return JSON.stringify(movieDetails);
-} catch (error) {
-   console.error('Error fetching movie details:', error);
-   return JSON.stringify({ code: 0, msg: "获取数据失败", error: error.message });
-}
+  try {
+      const vod_id = ids;
+      const vod_year = '';
+      const vod_director = '';
+      const vod_actor = '';
+      const vod_content = '推送源无剧情';
+      let vod_pic = '';
+      let vod_remarks = '';
+      let vod_play_from = [];
+      let vod_play_url = [];
+      let vodname = '';
+      let vodpic = '';
+      if (ids.includes('uc.cn')) {
+          vod_pic = 'https://bizaladdin-image.baidu.com/0/pic/-1114408436_513559284_235383715.png';
+          vod_play_from.push('UC网盘');
+      } else if (ids.includes('quark.cn')) {
+          vod_pic = 'https://bizaladdin-image.baidu.com/0/pic/-1383952426_1737186201_-54798625.png';
+         vod_play_from.push('夸克网盘');
+      }
+      if (vod_play_from.length>0) {
+          await toast(`正在获取${vod_play_from}剧集信息...`, 2);
+          const results = await fetchVideoFiles(ids);
+          if (results) {
+              vodname = results.vodname;
+              vodpic = results.vodpic;
+              vod_play_url.push(results.result);
+          }
+      }
+      const movieDetails = {
+          code: 1,
+          msg: "数据列表",
+          page: 1,
+          pagecount: 1,
+          limit: "20",
+          total: 1,
+          list: [{
+              vod_id,
+              vod_name: vodname || vod_id,
+              vod_pic: vodpic || vod_pic,
+              vod_actor,
+              vod_director,
+              vod_remarks,
+              vod_year,
+              vod_content,
+                vod_play_from: vod_play_from.join('$$$'),
+                vod_play_url: vod_play_url.join('$$$')
+          }]
+      };
+      //console.log(JSON.stringify(movieDetails));
+      return JSON.stringify(movieDetails);
+  } catch (error) {
+      console.error('Error fetching movie details:', error);
+      return JSON.stringify({ code: 0, msg: "获取数据失败", error: error.message });
+  }
 }
